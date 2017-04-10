@@ -16,7 +16,7 @@ router.post('/', function(req, res, next) {
 //  console.log(errors.length);
   if(errors){
     //console.log(errors.length);
-     res.render('contactus',{errors:errors});
+     res.render('contactus',{errors:errors,csrfToken:req.csrfToken()});
      res.end();
      }
   else{
